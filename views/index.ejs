@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Weather App</title>
+</head>
+<%# O weather ? é uma verificação — se weather existir usa a classe, senão deixa vazio. Isso evita erro quando a página carrega sem dados ainda.  %>
+<body class="<%= weather ? weather.bgClass : '' %>">
+    
+
+<div class="container">
+    <div class="card" id="form-card">
+    <form action="/weather" method="POST">
+        <label>Insira sua cidade</label>
+        <div class="form-input">
+            <input type="text" name="city">
+            <button type="submit">Enviar</button>
+    </div>
+    </form>
+    </div>
+
+    <% if (error) { %>
+        <%= error %>
+    <% } %>
+
+    <% if (weather) {%>
+
+        <div class="card" id="weather-card">
+         <p id="temperature"><%= weather.temperature %>ºC</p>
+    <p id="condition"><%= weather.condition %></p>
+        </div>
+    <% } %>
+</div>   
+</body>
+</html>
+
+
+

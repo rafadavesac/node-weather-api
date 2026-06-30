@@ -1,0 +1,81 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+}
+
+.dia{
+    background-image: url("/images/bg-day.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.noite{
+    background-image: url("/images/bg-night.png");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+form label{
+    font-size: 1.6rem;
+}
+
+form .form-input{
+    display: flex;
+    gap: 5px;
+    color: rgba(255, 255, 255, 0.714);
+}
+
+
+
+#form-card{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px; 
+}
+
+.dia #form-card, .dia #weather-card{
+    background-color: #b9c9d0ae;
+    border: 2px solid #d9e0e3fe;
+    color: #0c112e
+}
+
+.noite #form-card, .noite #weather-card{
+    border: 2px solid #0c112e;
+    background-color: #0c112ea0;
+    color: white;
+}
+
+#weather-card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 360px;
+    border-radius: 20px;  
+}
+
+#temperature{
+    font-size: 4.5rem;
+}
+
+#condition{
+    font-size: 2rem;
+}
