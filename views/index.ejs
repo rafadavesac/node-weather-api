@@ -6,7 +6,7 @@
     <title>Weather App</title>
 </head>
 <%# O weather ? é uma verificação — se weather existir usa a classe, senão deixa vazio. Isso evita erro quando a página carrega sem dados ainda.  %>
-<body class="<%= weather ? weather.bgClass : '' %>">
+<body class="<%= weather ? weather.bgClass : 'dia' %>">
     
 
 <div class="container">
@@ -21,7 +21,7 @@
     </div>
 
     <% if (error) { %>
-        <%= error %>
+        <div class="error-card"><%= error %></div>
     <% } %>
 
     <% if (weather) {%>
@@ -34,6 +34,3 @@
 </div>   
 </body>
 </html>
-
-
-
